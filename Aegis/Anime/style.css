@@ -1,0 +1,85 @@
+body {
+    background: #0d0d0d;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+  }
+  
+  .gallery {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .card {
+    width: 280px;
+    height: 420px;
+    perspective: 1000px;
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #ff00ff;
+  }
+  
+  .card-back {
+    background: #111;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px #00ffff;
+  }
+  
+  .card-back h2 {
+    color: #ff00ff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #ff00ff;
+  }
+  
+  .card-back h3 {
+    color: #00ffff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #00ffff;
+  }
+  
+  .card-back p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ccc;
+  }
+  
+  /* Character Images */
+  .kokushibo {
+    background: url('https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/5/5f/Kokushibo_anime.png') center/cover no-repeat;
+  }
+  
+  .doma {
+    background: url('https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/1/1a/Doma_anime.png') center/cover no-repeat;
+  }
+  
+  .akaza {
+    background: url('https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/6/6f/Akaza_anime.png') center/cover no-repeat;
+  }
